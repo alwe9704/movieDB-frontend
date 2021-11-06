@@ -21,7 +21,7 @@ const PopularItem = ({movie} : Props) => {
                 :
                 <div className="poster" style={
                     {
-                        backgroundImage: `url(https://image.tmdb.org/t/p/original/${movie.poster_path})`
+                        backgroundImage: `url(https://image.tmdb.org/t/p/w300/${movie.poster_path})`
                     }
                 }></div>
             }

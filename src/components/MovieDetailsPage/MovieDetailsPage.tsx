@@ -56,7 +56,7 @@ const MovieDetailsPage = () => {
                                 return (<div key={member.id} className="actor">
                                     <div 
                                         className="image" 
-                                        style={{backgroundImage: `url(https://image.tmdb.org/t/p/original/${member.profile_path})`}}/>
+                                        style={{backgroundImage: `url(https://image.tmdb.org/t/p/w200/${member.profile_path})`}}/>
                                     <h3>{member.name}</h3>
                                 </div>)
                             })}
