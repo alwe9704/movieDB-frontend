@@ -1,0 +1,24 @@
+.movie {
+    text-decoration: none;
+    .poster {
+        //width:270px;
+        padding-top: 148.14%;
+        background-size: cover;;
+    }
+    .no-poster {
+        padding-top: 74.07%;
+        padding-bottom: 74.07%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        background-color: rgba(0,0,0,0.7);
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+
+        h3 {
+            position: absolute;
+        }
+    }
+}
