@@ -2,6 +2,7 @@
   "name": "imdb-clone",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://alwe9704.github.io/movieDB-frontend",
   "dependencies": {
     "@emotion/react": "^11.5.0",
     "@emotion/styled": "^11.3.0",
@@ -24,7 +25,6 @@
     "typescript": "^4.4.4",
     "web-vitals": "^1.1.2"
   },
-  "homepage": "https://alwe9704.github.io/movieDB-frontend/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -32,7 +32,6 @@
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
-
   },
   "eslintConfig": {
     "extends": [
@@ -51,5 +50,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^3.2.3"
   }
 }
