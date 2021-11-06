@@ -26,7 +26,6 @@ const PopularList = () => {
         })
       }, [])
 
-
     const searchTermChange = async (searchTerm: string) => {
         if (searchTerm === "") {
             setMovies(popularMovies);
@@ -49,16 +48,11 @@ const PopularList = () => {
 
     return (
         <div className='popular'>
-            {
-                popularMovies.length !== 0 ? 
+            {popularMovies.length !== 0 ? 
                     <div className="header" style={{backgroundImage: `url(https://image.tmdb.org/t/p/original/${popularMovies[0].backdrop_path})`}}>
                         <h1>MicroAA MovieDB</h1>
-                    </div> : 
-                    <div>
-
-                    </div>
-            }
-        
+                    </div> 
+                    : <div />}
             <div className="form">
                 <h1>Popular Movies</h1>
                 <TextField 
@@ -77,17 +71,15 @@ const PopularList = () => {
                         max={10}
                     />
                 </div>
-                
             </div>
-            {
-                searching ?
-                    <CircularProgress />
-                    :
-                    <div className="movies">
-                        {visibleMovies.map(movie => {
-                            return <PopularItem key={movie.id} movie={movie}/>
-                        })}
-                    </div>
+            {searching ?
+                <CircularProgress />
+                :
+                <div className="movies">
+                    {visibleMovies.map(movie => {
+                        return <PopularItem key={movie.id} movie={movie}/>
+                    })}
+                </div>
             }
         </div>
     );
