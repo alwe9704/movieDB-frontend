@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/movieDB-frontend/static/css/main.581b135f.chunk.css",
-    "main.js": "/movieDB-frontend/static/js/main.bde9c020.chunk.js",
-    "main.js.map": "/movieDB-frontend/static/js/main.bde9c020.chunk.js.map",
+    "main.js": "/movieDB-frontend/static/js/main.3c5dc518.chunk.js",
+    "main.js.map": "/movieDB-frontend/static/js/main.3c5dc518.chunk.js.map",
     "runtime-main.js": "/movieDB-frontend/static/js/runtime-main.c3cf0d05.js",
     "runtime-main.js.map": "/movieDB-frontend/static/js/runtime-main.c3cf0d05.js.map",
     "static/js/2.c9716811.chunk.js": "/movieDB-frontend/static/js/2.c9716811.chunk.js",
@@ -15,6 +15,6 @@
     "static/js/runtime-main.c3cf0d05.js",
     "static/js/2.c9716811.chunk.js",
     "static/css/main.581b135f.chunk.css",
-    "static/js/main.bde9c020.chunk.js"
+    "static/js/main.3c5dc518.chunk.js"
   ]
 }
