@@ -1,13 +1,10 @@
 import { CircularProgress, Slider, TextField } from '@mui/material';
-import { useFormik } from 'formik';
 import React, { useEffect, useState } from 'react';
-import { MovieDetails, MovieSearchResult } from '../../models/MovieModels';
+import { MovieSearchResult } from '../../models/MovieModels';
 import MovieAPI from '../../utils/MovieAPI';
 import PopularItem from '../PopularItem/PopularItem';
 
 import './PopularList.scss';
-
-const ratingsOptions = Array.from(Array(100).keys()).map(x => x/10);
 
 const PopularList = () => {
 
@@ -53,7 +50,7 @@ const PopularList = () => {
     return (
         <div className='popular'>
             {
-                popularMovies.length != 0 ? 
+                popularMovies.length !== 0 ? 
                     <div className="header" style={{backgroundImage: `url(https://image.tmdb.org/t/p/original/${popularMovies[0].backdrop_path})`}}>
                         <h1>MicroAA MovieDB</h1>
                     </div> : 

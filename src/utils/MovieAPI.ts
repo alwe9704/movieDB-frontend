@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { MovieSearchResult, MovieDetails, Video, MovieVideoDetails, Crewmember } from '../models/MovieModels';
+import { MovieSearchResult, MovieDetails, MovieVideoDetails, Crewmember } from '../models/MovieModels';
 
 const instance = axios.create({
     baseURL: 'https://api.themoviedb.org/3/'
@@ -16,11 +16,12 @@ interface Crewresult {
     cast: Crewmember[]
 };
 
-
-export default {
+const MovieAPI = {
     getPopularMovies: async () => { return await (await instance.get<SearchResult>(`movie/popular?${api_string}&language=en-US&page=1`)).data.results; },
     getMovieDetails: async (id: string) => { return await (await instance.get<MovieDetails>(`movie/${id}?${api_string}&language=en-US`)).data; },
     getMovieVideos: async(id: string) => { return await (await instance.get<MovieVideoDetails>(`movie/${id}/videos?${api_string}&language=en-US`)).data.results; },
     searchMovies: async (searchTerm: string) => { return await (await instance.get<SearchResult>(`search/movie?${api_string}&query=${searchTerm}`)).data.results; },
     getCrew: async (id: string) => { return await (await instance.get<Crewresult>(`movie/${id}/credits?${api_string}&language=en-US`)).data.cast; }
-};
+}
+
+export default MovieAPI;

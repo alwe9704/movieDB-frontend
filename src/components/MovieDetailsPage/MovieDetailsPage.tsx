@@ -1,7 +1,7 @@
 import { CircularProgress } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
-import { Crewmember, MovieDetails, MovieVideoDetails, Video } from '../../models/MovieModels';
+import { Crewmember, MovieDetails, Video } from '../../models/MovieModels';
 import MovieAPI from '../../utils/MovieAPI';
 
 import './MovieDetailsPage.scss';
@@ -22,7 +22,6 @@ const MovieDetailsPage = () => {
             MovieAPI.getMovieVideos(useId),
             MovieAPI.getCrew(useId)
         ]).then(response => {
-            console.log(response[2]);
             Promise.all([
                 setMovie(response[0]),
                 setVideos(response[1]),
@@ -31,7 +30,7 @@ const MovieDetailsPage = () => {
                 setLoading(false);
             })
         })
-    }, []);
+    }, [id]);
     return <div className="movie-details-page">
         {
             loading ? <CircularProgress />

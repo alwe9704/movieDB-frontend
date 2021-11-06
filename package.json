@@ -24,6 +24,7 @@
     "typescript": "^4.4.4",
     "web-vitals": "^1.1.2"
   },
+  "homepage": "https://alwe9704.github.io/movieDB-frontend",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

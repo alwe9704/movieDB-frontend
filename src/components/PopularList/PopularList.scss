@@ -1,9 +1,11 @@
 .popular {
     .header {
-        width: 100%;
+        width: minmax(100%, 1000px);
         height: 0px;
         padding-top: 28.13%;
         padding-bottom: 28.13%;
+
+        background-size: cover;
 
         display: flex;
         align-items: center;
